@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Guidline</title>
+    <link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css"/>
+    <link rel="stylesheet" href="../css/custom.css">
+</head>
+<body>
+<div class="container">
+    <h1>Верстка Email-писем</h1>
+
+    <p>Вёрстка HTML для электронной почты — интересная и довольно сложная задача. Письма должны одинаково хорошо
+        отображаться на старых устройствах и версиях программных клиентов. </p>
+
+    <p>Главной проблемой при вёрстке email-писем является тот факт, что существует огромное количество софта для чтения
+        подобных сообщений — от десктоп-продуктов вроде Eudora Outlook, AOL, Thunderbird и Lotus Notes до веб-сервисов
+        вроде Yahoo!, Gmail, Mail.ru и до мобильных почтовых приложений. </p>
+
+    <h2>Основные положения</h2>
+    <ul>
+        <li>Верстать <i>почти</i> все лайауты таблицами. Даже кнопку</li>
+        <li>Стили для элементов должны быть inline'ом. Впрочем, об этом позаботится сборщик</li>
+        <li>Изображения хранить где-то, подключать через абсолютные пути</li>
+    </ul>
+
+    <h2>Установка сборщика</h2>
+
+    <p>Для установки требуется глобально установленные Node.js и Bower.
+
+    <ol>
+        <li><a href="https://github.com/amir73911/Gulp-Email-Pack/archive/master.zip">Скачайте</a> и разархивируйте
+            сборщик в папке проекта
+        </li>
+        <li>В командной строке ввести <code>npm i && bower i</code></li>
+    </ol>
+
+    <h2>Использование</h2>
+
+    <p>Для работы достаточно ввести в командной строке <code>gulp</code>.</p>
+
+    <p>Результат работы будет лежать в папке <code>output</code> в виде html-файла с встроенными inline-стилями.</p>
+
+    <p>Сами же стили пишем не inline, а в <code>src/scss</code> , что компилируется в <code>src/css</code>, что в свою
+        очередь "инлайнится" в html-документ. </p>
+
+    <p>Изображения сжимать через специализированные сервисы и заливать в облако (какое - зависит от проекта). Так же
+        обязательно сохранять ихображения в папку <code>images</code> чтобы при сдачи работы были <b>все</b> исходники
+        письма.
+
+    <h2>Примечания</h2>
+
+    <p>В сборке использована методология верстки <a href="http://foundation.zurb.com/emails/docs" target="_blank">Foundation
+        for
+        Emails</a>. Обязательно к изучению.</p>
+
+    <p>В сборке есть файл <code>demo.html</code>, который более полно описывает работу со сборкой. Обязательно к
+        изучению
+        исходников.</p>
+
+    <h2>Полезные ссылки</h2>
+    <ul>
+        <li><a href="https://habrahabr.ru/company/pechkin/blog/255819/" target="_blank">How-to: Правила вёрстки
+            email-писем</a></li>
+        <li><a href="https://github.com/amir73911/Gulp-Email-Pack" target="_blank">Gulp Email Pack</a></li>
+        <li><a href="https://litmus.com/builder/projects" target="_blank">Сервис для отладки email-верстки Litmus.com</a></li>
+    </ul>
+
+</div>
+</body>
+</html>
